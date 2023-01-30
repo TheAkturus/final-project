@@ -15,34 +15,47 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <h1>New York</h1>
-        <h2>
-          <ul>
-            <li>Friday 05:00</li>
-            <li>Cloudy</li>
-          </ul>
-        </h2>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-              alt="Cloudy"
-            />
-            12° C | °F
-          </div>
-          <div class="col-6">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="overview">
+          <h1>New York</h1>
+          <h2>
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: 73%</li>
-              <li>Wind: 2 km/h</li>
+              <li>Friday 05:00</li>
+              <li>Cloudy</li>
             </ul>
+            </div>
+          </h2>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                  alt="Cloudy"
+                  id="icon"
+                />
+                <div>
+                  <strong id="temperature">12</strong
+                  ><span class="units">° C | <a href="">°F</a> </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Precipitation: 0%</li>
+                <li>Humidity: 73%</li>
+                <li>Wind: 2 km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <small>
-          <a href="https://github.com/TheAkturus/final-project" target="_blank"
-            >Open-source code by Bernadette Alster</a
+        <small class="byline">
+          <a
+            href="https://github.com/TheAkturus/final-project"
+            target="_blank"
+            >Open-source code</a
           >
+          by Bernadette Alster
         </small>
       </div>
     </div>
