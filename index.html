@@ -10,6 +10,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <title>Vanilla Weather App</title>
   </head>
@@ -18,11 +19,11 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="overview">
-          <h1>New York</h1>
+          <h1 id="city"></h1>
           <h2>
             <ul>
-              <li>Friday 05:00</li>
-              <li>Cloudy</li>
+              <li class="day-and-time">Friday 05:00</li>
+              <li id="description">Hvor er beskrivelsen?</li>
             </ul>
             </div>
           </h2>
@@ -35,16 +36,16 @@
                   id="icon"
                 />
                 <div>
-                  <strong id="temperature">12</strong
-                  ><span class="units">° C | <a href="">°F</a> </span>
+                  <strong id="temperature"></strong
+                  ><span class="units">° C</span>
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: 73%</li>
-                <li>Wind: 2 km/h</li>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Pressure: <span id="pressure"></span> hPa</li>
+                 <li>Percieved: <span id="percieved"></span>° C</li>
               </ul>
             </div>
           </div>
