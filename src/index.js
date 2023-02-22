@@ -22,6 +22,7 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
+  console.log(response.data.condition.icon_url);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -29,6 +30,8 @@ function displayTemperature(response) {
   let percievedElement = document.querySelector("#percieved");
   let pressureElement = document.querySelector("#pressure");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
+
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
@@ -36,10 +39,15 @@ function displayTemperature(response) {
   percievedElement.innerHTML = Math.round(response.data.temperature.feels_like);
   pressureElement.innerHTML = Math.round(response.data.temperature.pressure);
   dateElement.innerHTML = formatDate(response.data.time * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
 }
 
 let apiKey = "o63900578bab8e2291a011f640b7t390";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Copenhagen&key=o63900578bab8e2291a011f640b7t390&units=metric`;
+let city = "Copenhagen";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=o63900578bab8e2291a011f640b7t390&units=metric`;
 
 console.log(apiUrl);
 axios.get(apiUrl).then(displayTemperature);
