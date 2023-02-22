@@ -44,9 +44,19 @@ function displayTemperature(response) {
   );
 }
 
-let apiKey = "o63900578bab8e2291a011f640b7t390";
-let city = "Copenhagen";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=o63900578bab8e2291a011f640b7t390&units=metric`;
+function search(city) {
+  let apiKey = "o63900578bab8e2291a011f640b7t390";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=o63900578bab8e2291a011f640b7t390&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-console.log(apiUrl);
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Sydney");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
