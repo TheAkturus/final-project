@@ -90,3 +90,7 @@ li:first-letter {
 .weather-forecast-temperature-max {
   color: black;
 }
+
+.weather-forecast-temperature-min {
+  color: #878787;
+}
