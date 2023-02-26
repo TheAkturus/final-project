@@ -37,20 +37,20 @@ li:first-letter {
 
 .form-control {
   border-color: white;
-  box-shadow: 5px 5px 10px rgb(0 0 0 / 20%);
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 15%);
 }
 
 .btn-primary {
   background: white;
   color: black;
-  box-shadow: 5px 5px 10px rgb(0 0 0 / 20%);
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 15%);
   transition: all 200ms ease-in-out;
   border-color: white;
 }
 
 .btn-primary:hover {
-  background-color: #3f9493;
-  border-color: #3f9493;
+  background-color: #50a193;
+  border-color: #50a193;
 }
 
 .weather-app-wrapper {
