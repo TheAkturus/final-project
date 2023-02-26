@@ -20,7 +20,7 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: black;
+  color: rgba(0, 0, 0, 0.645);
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
@@ -32,19 +32,25 @@ li:first-letter {
 
 .weather-app {
   background: linear-gradient(to bottom, rgb(182, 244, 146), rgb(51, 139, 147));
+  border-color: white;
+}
+
+.form-control {
+  border-color: white;
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 20%);
 }
 
 .btn-primary {
   background: white;
   color: black;
-  border: 1px solid;
-  border-color: #3f9493;
-  box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 20%);
   transition: all 200ms ease-in-out;
+  border-color: white;
 }
 
 .btn-primary:hover {
   background-color: #3f9493;
+  border-color: #3f9493;
 }
 
 .weather-app-wrapper {
@@ -54,7 +60,6 @@ li:first-letter {
 
 .weather-app {
   padding: 20px;
-  border: 1px solid #dadde1;
   border-radius: 10px;
 }
 
@@ -105,11 +110,11 @@ li:first-letter {
 }
 
 .weather-forecast-temperature-max {
-  color: black;
+  color: white;
 }
 
 .weather-forecast-temperature-min {
-  color: white;
+  color: rgba(255, 255, 255, 0.623);
 }
 
 .weather-forecast-wind {
