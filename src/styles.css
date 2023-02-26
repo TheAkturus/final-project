@@ -94,3 +94,8 @@ li:first-letter {
 .weather-forecast-temperature-min {
   color: #878787;
 }
+
+.weather-forecast-wind {
+  color: #878787;
+  font-size: 13px;
+}

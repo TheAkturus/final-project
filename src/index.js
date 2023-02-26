@@ -58,7 +58,11 @@ function displayForecast(response) {
           )}° </span>
           <span class="weather-forecast-temperature-min">${Math.round(
             forecastDay.temperature.minimum
-          )}° </span>
+          )}° </span> 
+          <br />
+           <div class="weather-forecast-wind">
+           <div>~</div>
+           <div>Wind</div>${Math.round(forecastDay.wind.speed)}km/h </div>
         </div>
       </div>
   `;
