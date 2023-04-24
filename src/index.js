@@ -61,7 +61,7 @@ function displayForecast(response) {
           <br />
            <div class="weather-forecast-wind">
            <div>~</div>
-           <div>Wind</div>${Math.round(forecastDay.wind.speed)}km/h </div>
+           <div>Wind</div>${Math.round(forecastDay.wind.speed)}m/s </div>
         </div>
       </div>
   `;
